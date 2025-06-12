@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Opaque.Tests/Opaque.Tests.csproj" />
+  <Project Path="Opaque/Opaque.csproj" />
+</Solution>

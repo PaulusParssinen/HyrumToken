@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="HyrumToken.Tests/HyrumToken.Tests.csproj" />
-  <Project Path="HyrumToken/HyrumToken.csproj" />
-</Solution>

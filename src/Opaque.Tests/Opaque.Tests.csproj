@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HyrumToken\HyrumToken.csproj" />
+    <ProjectReference Include="..\Opaque\Opaque.csproj" />
   </ItemGroup>
 
   <ItemGroup>

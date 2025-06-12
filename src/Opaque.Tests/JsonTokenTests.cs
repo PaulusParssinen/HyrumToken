@@ -1,6 +1,6 @@
-﻿namespace HyrumToken.Tests;
+﻿namespace Opaque.Tests;
 
-public class HyrumTokenTests
+public class JsonTokenTests
 {
     private static ReadOnlySpan<byte> Key => "TESTINGKEY123456TESTINGKEY123456"u8;
 
@@ -12,8 +12,8 @@ public class HyrumTokenTests
         Span<byte> buffer = stackalloc byte[128];
         var value = new FooBar(Foo: "Bar");
 
-        int bytesWritten = HyrumToken.Encode(Key, value, buffer);
-        bool success = HyrumToken.TryDecode(Key, buffer.Slice(0, bytesWritten), out FooBar? decodedValue);
+        int bytesWritten = JsonTokenEncoder.Encode(Key, value, buffer);
+        bool success = JsonTokenEncoder.TryDecode(Key, buffer.Slice(0, bytesWritten), out FooBar? decodedValue);
 
         Assert.True(success);
         Assert.Equivalent(value, decodedValue);
@@ -25,8 +25,8 @@ public class HyrumTokenTests
         Span<byte> buffer = stackalloc byte[128];
         int value = 1033;
 
-        int bytesWritten = HyrumToken.Encode(Key, value, buffer);
-        bool success = HyrumToken.TryDecode(Key, buffer.Slice(0, bytesWritten), out int? decodedValue);
+        int bytesWritten = JsonTokenEncoder.Encode(Key, value, buffer);
+        bool success = JsonTokenEncoder.TryDecode(Key, buffer.Slice(0, bytesWritten), out int? decodedValue);
 
         Assert.True(success);
         Assert.Equivalent(value, decodedValue);
@@ -39,8 +39,8 @@ public class HyrumTokenTests
         Span<byte> buffer = stackalloc byte[128];
         string[] value = ["foo", "bar"];
 
-        int bytesWritten = HyrumToken.Encode(Key, value, buffer);
-        bool success = HyrumToken.TryDecode(Key, buffer.Slice(0, bytesWritten), out string[]? decodedValue);
+        int bytesWritten = JsonTokenEncoder.Encode(Key, value, buffer);
+        bool success = JsonTokenEncoder.TryDecode(Key, buffer.Slice(0, bytesWritten), out string[]? decodedValue);
 
         Assert.True(success);
         Assert.Equivalent(value, decodedValue);

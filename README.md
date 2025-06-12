@@ -1,2 +1,3 @@
-# HyrumToken
-A .NET library to encrypt your pagination tokens. Port of https://github.com/ssoready/hyrumtoken
+# Opaque
+
+A .NET library to create some opaque tokens. Port of https://github.com/ssoready/hyrumtoken

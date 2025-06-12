@@ -18,12 +18,12 @@
 
 	<PropertyGroup Label="NuGet Metadata">
 		<Version>0.0.1</Version>
-		<Title>HyrumToken</Title>
-		<PackageId>HyrumToken</PackageId>
+		<Title>Opaque</Title>
+		<PackageId>Opaque</PackageId>
 		<Authors>Paulus Pärssinen</Authors>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/PaulusParssinen/HyrumToken</RepositoryUrl>
+		<RepositoryUrl>https://github.com/PaulusParssinen/Opaque</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
